@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Movie Search!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="cyan accent-1">
+        <div class="nav-wrapper">
+        <!-- navbar brand, navbar menu... -->
+          <a href="#" class="brand-logo center">What'd he Play In?</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div class="searchArea"> 
+        <h4>Actor Search</h4>
+        <form class="searchContainer">
+            <!-- <input type="text">Enter Actor Search Here</input> -->
+            <input type="text" name="" id="textArea">
+            <button class="btn waves-effect waves-light cyan accent-1" type="submit" name="action">Search
+                <i class="material-icons right">send</i>
+              </button>
+        </form>
+    </div>
+    <div class="container">
+       <div class="display">
+            <div class="actorCard">
+                <!-- Actor picture and/or Flimography here  -->
+                <h5>Actor information</h5>
+                <img class="actorPic"src="">
+            </div>
+            <div class="youtubeTrailer">
+                <!-- Trailer to latest movie from Youtube --> 
+               <h5>Youtube Trailer</h5>
+               <video src="" class="movieTrailer"></video>
+            </div>
+       </div>
+        <div class="popularMovies">
+            <ul class="inline">
+                <li class="pop1">Pop 1</li>
+                <li class="pop2">Pop 2</li>
+                <li class="pop3">Pop 3</li>
+                <li class="pop4">Pop 4</li>
+                <li class="pop5">Pop 5</li>
+            </ul>
+        </div>
+        <div class="rottenTomatoes">
+                <ul class="inline">
+                    <li class="top1">Top 1</li>
+                    <li class="top2">Top 2</li>
+                    <li class="top3">Top 3</li>
+                    <li class="top4">Top 4</li>
+                    <li class="top5">Top 5</li>
+                </ul>
+        </div>
+
+    </div>
+
+
+
+    
+    <!-- Header/Nav -->
+
+    <!-- Search container -->
+    <!-- Search category type -->
+
+    <!-- result container/cards? -->
+
+    <!-- Different dynamic HTML element depending on search category shown? -->
+    <!-- Search by actor reveals 3 dynamic elements -->
+    <!-- top 5 movies by popularity (IMDB API) -->
+    <!-- top 5 rotten tomato scored movies ascending list (rotten tomato API) -->
+    <!-- youtube preview window to latest trailer (youtube API) -->
+    <!-- search history container -->
+    <!-- option to clear search history -->
+    <!-- link js and jQuery -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+
+</html>

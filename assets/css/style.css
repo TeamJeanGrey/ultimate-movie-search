@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: cornsilk;
+
+}
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+h4{
+    display: block;
+    text-align: center;
+    
+}
+#textArea{
+    background-color: whitesmoke;
+    width: 400px;
+    margin-right: 20px;
+    color: black;
+    margin-bottom: 0;
+}
+.btn{
+    height: 40px;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    margin-bottom: 50px; 
+}
+.inline{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}

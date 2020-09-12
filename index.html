@@ -8,69 +8,107 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <nav class="cyan accent-1">
         <div class="nav-wrapper">
-        <!-- navbar brand, navbar menu... -->
-          <a href="#" class="brand-logo center">What'd he Play In?</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-    <div class="searchArea"> 
-        <h4>Actor Search</h4>
-        <form class="searchContainer">
-            <!-- <input type="text">Enter Actor Search Here</input> -->
-            <input type="text" name="" id="textArea">
-            <button class="btn waves-effect waves-light cyan accent-1" type="submit" name="action">Search
-                <i class="material-icons right">send</i>
-              </button>
-        </form>
-    </div>
-    <div class="container">
-       <div class="display">
-            <div class="actorCard">
-                <!-- Actor picture and/or Flimography here  -->
-                <h5>Actor information</h5>
-                <img class="actorPic"src="">
-            </div>
-            <div class="youtubeTrailer">
-                <!-- Trailer to latest movie from Youtube --> 
-               <h5>Youtube Trailer</h5>
-               <video src="" class="movieTrailer"></video>
-            </div>
-       </div>
-        <div class="popularMovies">
-            <ul class="inline">
-                <li class="pop1">Pop 1</li>
-                <li class="pop2">Pop 2</li>
-                <li class="pop3">Pop 3</li>
-                <li class="pop4">Pop 4</li>
-                <li class="pop5">Pop 5</li>
+            <!-- navbar brand, navbar menu... -->
+            <a href="#" class="brand-logo center">What'd he Play In?</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Search Histroy</a></li>
+                <li><a href="badges.html">Clear History</a></li>
             </ul>
         </div>
-        <div class="rottenTomatoes">
-                <ul class="inline">
-                    <li class="top1">Top 1</li>
-                    <li class="top2">Top 2</li>
-                    <li class="top3">Top 3</li>
-                    <li class="top4">Top 4</li>
-                    <li class="top5">Top 5</li>
-                </ul>
+    </nav>
+
+    <div class="search-area">
+        <h4>Actor Search</h4>
+        <form class="search-container">
+            <!-- <input type="text">Enter Actor Search Here</input> -->
+            <input type="text" name="" id="text-area">
+            <button class="btn waves-effect waves-light cyan accent-1" type="submit" name="action">Search
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+    <div class="container"> Actor Information
+        <div class="row display"> 
+            <div class="col s6 actor-card">
+                <!-- Actor picture and/or Flimography here  -->
+                <h5>Actor Picture</h5>
+                <img class="actor-pic" src="">
+            </div>
+            <div class="col s6 youtube-trailer">
+                <!-- Trailer to latest movie from Youtube -->
+                <h5>Actor Summary</h5>
+                <video src="" class="movie-trailer"></video>
+            </div>
+        </div>
+        <div class="row popular-movies">
+                <div class="col s1"></div>
+                <div class="col s2 pop-1"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content blue-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 pop-2"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content blue-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 pop-3"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content blue-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 pop-4"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content blue-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 pop-5"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content blue-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s1"></div>
+        </div>
+        <div class="row rotten-tomatoes">
+                <div class="col s1"></div>
+                <div class="col s2 top-1"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content grey-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 top-2"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content grey-text">text here</div>
+                    </div>
+                 </div>
+                <div class="col s2 top-3"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content grey-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 top-4"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content grey-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s2 top-5"><span class="flow-text"></span>
+                    <div class="card">
+                        <div class="card-content grey-text">text here</div>
+                    </div>
+                </div>
+                <div class="col s1"></div>
         </div>
 
     </div>
 
 
 
-    
+
     <!-- Header/Nav -->
 
     <!-- Search container -->
@@ -86,8 +124,8 @@
     <!-- search history container -->
     <!-- option to clear search history -->
     <!-- link js and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
-
 </body>
 
 

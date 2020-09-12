@@ -1,9 +1,10 @@
 body{
-    background-color: black;
+    background-color: gray;
     color: cornsilk;
+    text-align: center;
 
 }
-.searchContainer{
+.search-container{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -15,7 +16,7 @@ h4{
     text-align: center;
     
 }
-#textArea{
+#text-area{
     background-color: whitesmoke;
     width: 400px;
     margin-right: 20px;

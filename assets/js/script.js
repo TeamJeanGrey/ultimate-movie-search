@@ -8,7 +8,8 @@ var name = searchInputEl.value.trim();
 // api_key_1 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
 // api_key_2 = AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0
 
-// OMDB API Key = 8db38eaf9dmsh0f91b07783026d4p1d126fjsn14a66fa92fcd
+
+// Seth's OMBD API Key: e8893681
 // Seth's IMDB rapidAPI key: 7caae45cdcmshfed4878de75f005p14c8bbjsnecd1e19ab576
 //  var imdbURL = "https://imdb8.p.rapidapi.com/actors/get-bio?nconst=nm0001667"
 
@@ -66,9 +67,8 @@ var displayBio = function() {
     actorImgEl.setAttribute("src", imgUrl)
     console.log(actorImgEl)
     // get bio from IMDB API
-    var actorBio = miniBios[0].text
+    var actorBio = client.miniBios[0].text
     console.log(actorBio)
-    actorBioEl.textContent = actorBio
     
 }
 

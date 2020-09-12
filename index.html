@@ -26,10 +26,10 @@
     
     <div class="searchArea"> 
         <h4>Actor Search</h4>
-        <form class="searchContainer">
+        <form class="search-container" id="search-container">
             <!-- <input type="text">Enter Actor Search Here</input> -->
-            <input type="text" name="" id="textArea">
-            <button class="btn waves-effect waves-light cyan accent-1" type="submit" name="action">Search
+            <input type="text" name="actor-name" id="actor-name" value="ben stiller">
+            <button class="btn waves-effect waves-light cyan accent-1" type="submit" onclick="search()">Search
                 <i class="material-icons right">send</i>
               </button>
         </form>
@@ -44,7 +44,8 @@
             <div class="youtubeTrailer">
                 <!-- Trailer to latest movie from Youtube --> 
                <h5>Youtube Trailer</h5>
-               <video src="" class="movieTrailer"></video>
+               <div id="player"></div>
+               <pre id="response"></pre>
             </div>
        </div>
         <div class="popularMovies">
@@ -87,7 +88,8 @@
     <!-- option to clear search history -->
     <!-- link js and jQuery -->
     <script src="assets/js/script.js"></script>
-
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 </body>
 
 

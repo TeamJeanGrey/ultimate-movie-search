@@ -1,6 +1,7 @@
 var searchFormEl = document.querySelector("#search-container");
 var searchInputEl = document.querySelector("#actor-name");
 var actorImgEl = document.querySelector("#actor-img")
+var actorBioEl = document.querySelector("#actor-bio")
     // get value from input element
 var name = searchInputEl.value.trim();
 
@@ -60,12 +61,24 @@ var imdbActorBio = function(event) {
 // }
 
 var displayBio = function() {
+    // get image from IMDB API
     var imgUrl = "https://m.media-amazon.com/images/M/MV5BMGEwYzJhOTctNjZkMy00NTZjLWE3MTctNGU2ZGRmODNiZmNiXkEyXkFqcGdeQXVyOTQyNzIyMDM@._V1_.jpg"
     actorImgEl.setAttribute("src", imgUrl)
     console.log(actorImgEl)
+    // get bio from IMDB API
+    var actorBio = miniBios[0].text
+    console.log(actorBio)
+    actorBioEl.textContent = actorBio
+    
 }
 
+// var displayKnownFor = function() {
 
+// }
+
+// var displayAwardList = function() {
+
+// }
 
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {

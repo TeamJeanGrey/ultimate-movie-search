@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Movie Search!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav class="cyan accent-1">
+        <div class="nav-wrapper">
+            <!-- navbar brand, navbar menu... -->
+            <a href="#" class="brand-logo center">The Ultimate Movie Info Search</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Search Histroy</a></li>
+                <li><a href="badges.html">Clear History</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="container"> 
+            <div class="col s6 youtubeTrailer">
+                <!-- Trailer to latest movie from Youtube --> 
+               <h5>Youtube Trailer</h5>
+               <iframe class="responsive-video" src="" allow="autoplay"></iframe>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="movie" class="well"></div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/test.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        getMovie();
+        getVideo();
+    </script>
+</body>
+
+
+</html>

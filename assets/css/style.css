@@ -13,16 +13,9 @@ body{
 }
 h4{
     display: block;
-    text-align: center;
-    
+    text-align: center;    
 }
-/* #actor-name{
-    background-color: whitesmoke;
-    width: 400px;
-    margin-right: 20px;
-    color: black;
-    margin-bottom: 0;
-} */
+
 .btn{
     height: 40px;
 }
@@ -41,4 +34,21 @@ h4{
 img {
     height: 450px;
     
+}
+
+#movies img, #movie img {
+    width: 100%;
+}
+
+.well {
+    MARGIN:20PX
+}
+
+#movies .col s2 .well{
+    height: 390px;
+    margin: 30px;
+}
+
+#movies .col s2 img {
+    height: 240px;
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Movie Search!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav class="cyan accent-1">
+        <div class="nav-wrapper">
+            <!-- navbar brand, navbar menu... -->
+            <a href="#" class="brand-logo center">The Ultimate Movie Info Search</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Search Histroy</a></li>
+                <li><a href="badges.html">Clear History</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="search-area">
+        <h3>Search a Movie Title</h3>
+        <form class="search-container" id="search-container">
+            <div class="row">
+                <div class="input-field col s8">
+                    <!-- <input type="text">Enter Actor Search Here</input> -->
+                    <input class="validate" type="text" name="movie-name" id="movie-name" placeholder="Movie Name">
+                </div>
+                <div class="input-field col s4">
+                    <button class="btn waves-effect waves-light cyan accent-1" type="submit">Search
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+        <div class="container">
+            <div id="movies" class="row"></div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/test.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+</body>
+
+
+</html>

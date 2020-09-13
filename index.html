@@ -25,11 +25,17 @@
     <div class="search-area">
         <h3>Actor Search</h3>
         <form class="search-container" id="search-container">
-            <!-- <input type="text">Enter Actor Search Here</input> -->
-            <input type="text" name="actor-name" id="actor-name" value="ben stiller">
-            <button class="btn waves-effect waves-light cyan accent-1" type="submit" onclick="search()">Search
-                <i class="material-icons right">send</i>
-            </button>
+            <div class="row">
+                <div class="input-field col s8">
+                    <!-- <input type="text">Enter Actor Search Here</input> -->
+                    <input class="validate" type="text" name="actor-name" id="actor-name" placeholder="Actor Name">
+                </div>
+                <div class="input-field col s4">
+                    <button class="btn waves-effect waves-light cyan accent-1" type="submit">Search
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
     <div class="container"> 
@@ -41,11 +47,10 @@
                 <h5>Actor Picture</h5>
                 <img id="actor-img" src="">
             </div>
-            <div class="youtubeTrailer">
+            <div class="col s6 youtubeTrailer">
                 <!-- Trailer to latest movie from Youtube --> 
                <h5>Youtube Trailer</h5>
-               <div id="player"></div>
-               <pre id="response"></pre>
+               <iframe class="responsive-video" src="" allow="autoplay"></iframe>
             </div>
         </div>
         <h5> What this Actor is Known For</h5>
@@ -130,9 +135,10 @@
     <!-- option to clear search history -->
     <!-- link js and jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/test.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
     <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
 </body>
 
 

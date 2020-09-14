@@ -1,7 +1,6 @@
 body{
     background-color: gray;
     color: cornsilk;
-    text-align: center;
 
 }
 .search-container{
@@ -19,6 +18,7 @@ h4{
 .btn{
     height: 40px;
 }
+
 .display{
     display: flex;
     flex-direction: row;
@@ -41,7 +41,7 @@ img {
 }
 
 .well {
-    MARGIN:20PX
+    margin-top: 20px;
 }
 
 #movies .col s2 .well{
@@ -51,4 +51,9 @@ img {
 
 #movies .col s2 img {
     height: 240px;
+}
+
+.card {
+    color: black;
+    background-color: lightgray;
 }

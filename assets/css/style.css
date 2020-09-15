@@ -1,7 +1,18 @@
 body{
-    background-color: gray;
-    color: cornsilk;
+    background-color: #1f2933;
+    color: white;
+}
 
+nav {
+    background-color: #3e4c59;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.container {
+    padding: 20px;
 }
 .search-container{
     display: flex;
@@ -9,15 +20,21 @@ body{
     align-content: center;
     align-items: center;
     margin-bottom: 50px;
+    color: white;
 }
 h4{
     display: block;
     text-align: center;    
 }
 
-.btn{
-    height: 40px;
+.search-area {
+    margin-top: 20px;
 }
+
+.search {
+    height: 100%;
+}
+
 
 .display{
     display: flex;
@@ -57,3 +74,5 @@ img {
     color: black;
     background-color: lightgray;
 }
+
+@media

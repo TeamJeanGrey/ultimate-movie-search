@@ -17,7 +17,7 @@ function getMovies(searchName) {
             $.each(movies, (index, movie) => {
                 output += `
             
-            <div class="col l3 m4 s12">
+            <div class="col xl3 l4 m6 s12">
                 <div class="card large" >
                     <div class="card-image">
                         <img class="responsive-img" src="${movie.Poster}">
@@ -34,7 +34,7 @@ function getMovies(searchName) {
             `;
             });
 
-            $('#movies').html(output)
+            $('#movies').prepend(output)
         })
         .catch((error) => {
             console.log(error)
@@ -64,11 +64,11 @@ function getMovie() {
             console.log(response.data.Actors)
             var output = `
             <div class="row">
-                <div class="col s4">
+                <div class="col s12 m4">
                     <img src="${movie.Poster}" class="thumbnail">
                 </div>
-                <div class="col s8">
-                    <h2>${movie.Title}</h2>
+                <div class="col s12 m8">
+                    <h3>${movie.Title}</h3>
                         <ul class="list-group">
                             <li class="list-group-item">Genre:${movie.Genre}</li>
                             <li class="list-group-item">Released:${movie.Released}</li>
@@ -83,11 +83,20 @@ function getMovie() {
                 <div class="well">
                     <h3>Plot</h3>
                     ${movie.Plot}
-                    <hr>
-                    <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class=btn btn-primary">View IMDB Page</a>
-                    <a href="landing.html" class="btn btn-default">Back to Search Page</a>
                 </div>
             </div>
+
+            <div class="col s12">
+            <!-- Trailer to latest movie from Youtube -->
+            <h3>Trailer</h3>
+            <div class="video-container">
+                <iframe src="" allow="autoplay" frameborder="0"></iframe>
+            </div>
+            </br>
+            <hr>
+            </br>
+                    <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class=btn btn-primary">View IMDB Page</a>
+                    <a href="landing.html" class="btn btn-default">Back to Search Page</a>
         `;
             $('#movie').html(output)
         })
@@ -112,7 +121,7 @@ function getVideo() {
         data: {
             // key1 = AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
-            key: 'AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo',
+            key: 'AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0',
             q: query,
             part: 'snippet',
             maxResults: 1,

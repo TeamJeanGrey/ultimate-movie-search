@@ -40,17 +40,17 @@ function getMovies(searchName) {
             console.log(error)
         })
 }
-// put user's text input request value in session storage
+// save id to session storage and redirect to movie.html
 function movieSelected(id) {
     sessionStorage.setItem('movieId', id);
     window.location = 'movie.html'
     return false
 }
-
+// set movie title for detail pages to call
 function setMovieSelected(title) {
     sessionStorage.setItem('movie-title', title)
 }
-
+// save user's search into session storage
 function saveInput(searchName) {
     sessionStorage.setItem("movie-name", searchName)
 
@@ -77,6 +77,8 @@ function getMovie() {
                             <li class="list-group-item">Writer:${movie.Writer}</li>
                             <li class="list-group-item">Actors:${movie.Actors}</li>
                         </ul>
+                        <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class=btn btn-primary">View IMDB Page</a>
+                        <a href="landing.html" class="btn btn-default">Back to Search Page</a>
                 </div>
             </div>
             <div class="row">
@@ -95,8 +97,7 @@ function getMovie() {
             </br>
             <hr>
             </br>
-                    <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class=btn btn-primary">View IMDB Page</a>
-                    <a href="landing.html" class="btn btn-default">Back to Search Page</a>
+
         `;
             $('#movie').html(output)
         })
@@ -121,7 +122,9 @@ function getVideo() {
         data: {
             // key1 = AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
-            key: 'AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0',
+            // key3 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
+            // key4 = AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg
+            key: 'AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg',
             q: query,
             part: 'snippet',
             maxResults: 1,

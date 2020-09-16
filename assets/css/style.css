@@ -1,8 +1,18 @@
 body{
-    background-color: gray;
-    color: cornsilk;
-    text-align: center;
+    background-color: #1f2933;
+    color: white;
+}
 
+nav {
+    background-color: #3e4c59;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.container {
+    padding: 20px;
 }
 .search-container{
     display: flex;
@@ -10,15 +20,26 @@ body{
     align-content: center;
     align-items: center;
     margin-bottom: 50px;
+    color: white;
 }
 h4{
     display: block;
     text-align: center;    
 }
 
-.btn{
-    height: 40px;
+.search-area {
+    margin-top: 20px;
 }
+
+.search {
+    height: 100%;
+}
+
+.input-field input :focus{
+    background-color: #1f2933 !important;
+}
+
+
 .display{
     display: flex;
     flex-direction: row;
@@ -41,7 +62,11 @@ img {
 }
 
 .well {
-    MARGIN:20PX
+    margin-top: 20px;
+}
+
+.btn {
+    margin-bottom: 5px;
 }
 
 #movies .col s2 .well{
@@ -52,6 +77,27 @@ img {
 #movies .col s2 img {
     height: 240px;
 }
+<<<<<<< HEAD
 .history-btn {
     margin: 10px;
 }
+=======
+
+.card {
+    color: white;
+    background-color: #7b8794;
+}
+
+.header-short {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .header-full { display: none !important}
+    .header-short { display: flex !important}
+    .landing-header {
+        font-size: 3vw !important;
+        font-weight: bold !important;
+    }
+  }
+>>>>>>> 681470493b08e23a25b0688b5c99e6599044ce79

@@ -52,3 +52,6 @@ img {
 #movies .col s2 img {
     height: 240px;
 }
+.history-btn {
+    margin: 10px;
+}

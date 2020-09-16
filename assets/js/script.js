@@ -1,3 +1,5 @@
+var movieTitle = sessionStorage.getItem("movie-title");
+
 $(document).ready(function () {
     $("#search-container").submit(function (event) {
         searchName = $('#movie-name').val().trim()
@@ -124,7 +126,7 @@ function getVideo() {
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
             // key3 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
             // key4 = AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg
-            key: 'AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg',
+            key: 'AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0',
             q: query,
             part: 'snippet',
             maxResults: 1,
@@ -143,4 +145,67 @@ function getVideo() {
 
 function embedVideo(data) {
     $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId + "?autoplay=1&;enablejsapi=1")
+}
+// rapidapi_key1 = 
+var getTop5 = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://imdb8.p.rapidapi.com/title/get-top-rated-movies",
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "imdb8.p.rapidapi.com",
+        "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
+    }
+}
+
+$.ajax(getTop5).done(function (response) {
+    console.log(response);
+    var top5 = response.slice(0, 5);
+    console.log(top5);
+    var id = [];
+    for (i = 0; i < top5.length; i++) {
+        id[i] = top5[i].id.split("/")[2];
+    }
+    console.log(id);
+    var top5ID = sessionStorage.setItem('top5', JSON.stringify(id))
+});
+
+var top5id = [];
+top5id = JSON.parse(sessionStorage.getItem('top5'));
+for (i = 0; i < top5id.length; i++) {
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://imdb8.p.rapidapi.com/title/get-details?tconst=" + top5id[i],
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "imdb8.p.rapidapi.com",
+            "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        var moviePoster = response.image.url;
+        var movieTitle = response.title;
+        console.log(moviePoster);
+        var output = "";
+        output += `
+            <div class="col xl3 l4 m6 s12">
+                <div class="card large" >
+                    <div class="card-image">
+                        <img class="responsive-img" src="${moviePoster}">
+                    </div>
+                    <div class="card-content">
+                        <h5>${movieTitle}</h5>
+                    <div class="card-action center">
+                        <a onclick="movieSelected('${response.id.split("/")[2]}'); setMovieSelected('${movieTitle}')" class="btn btn-primary" href="#">Movie Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            `;
+        $('#movies').append(output)
+    });
+
 }

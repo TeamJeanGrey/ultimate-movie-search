@@ -80,7 +80,7 @@ function getMovie() {
                             <li class="list-group-item">Actors:${movie.Actors}</li>
                         </ul>
                         <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class=btn btn-primary">View IMDB Page</a>
-                        <a href="landing.html" class="btn btn-default">Back to Search Page</a>
+                        <a href="index.html" class="btn btn-default">Back to Search Page</a>
                 </div>
             </div>
             <div class="row">

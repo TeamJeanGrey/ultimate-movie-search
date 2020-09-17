@@ -126,7 +126,7 @@ function getVideo() {
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
             // key3 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
             // key4 = AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg
-            key: 'AIzaSyB7jf8WLIKIDfZ5iuVWr7m3McWZMoWmYE0',
+            key: 'AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo',
             q: query,
             part: 'snippet',
             maxResults: 1,
@@ -146,37 +146,12 @@ function getVideo() {
 function embedVideo(data) {
     $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId + "?autoplay=1&;enablejsapi=1")
 }
-// rapidapi_key1 = 
-var getTop5 = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://imdb8.p.rapidapi.com/title/get-top-rated-movies",
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-host": "imdb8.p.rapidapi.com",
-        "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
-    }
-}
-
-$.ajax(getTop5).done(function (response) {
-    console.log(response);
-    var top5 = response.slice(0, 10);
-    console.log(top5);
-    var id = [];
-    for (i = 0; i < top5.length; i++) {
-        id[i] = top5[i].id.split("/")[2];
-    }
-    console.log(id);
-    var top5ID = sessionStorage.setItem('top5', JSON.stringify(id))
-});
-
-var top5id = [];
-top5id = JSON.parse(sessionStorage.getItem('top5'));
-for (i = 0; i < top5id.length - 1; i++) {
-    var settings = {
+function getTop4() {
+    // rapidapi_key1 = 
+    var gettop4 = {
         "async": true,
         "crossDomain": true,
-        "url": "https://imdb8.p.rapidapi.com/title/get-details?tconst=" + top5id[i],
+        "url": "https://imdb8.p.rapidapi.com/title/get-top-rated-movies",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "imdb8.p.rapidapi.com",
@@ -184,13 +159,38 @@ for (i = 0; i < top5id.length - 1; i++) {
         }
     }
 
-    $.ajax(settings).done(function (response) {
+    $.ajax(gettop4).done(function (response) {
         console.log(response);
-        var moviePoster = response.image.url;
-        var movieTitle = response.title;
-        console.log(moviePoster);
-        var output = "";
-        output += `
+        var top4 = response.slice(0, 4);
+        console.log(top4);
+        var id = [];
+        for (i = 0; i < top4.length; i++) {
+            id[i] = top4[i].id.split("/")[2];
+        }
+        console.log(id);
+        var top4ID = sessionStorage.setItem('top4', JSON.stringify(id))
+
+        var top4id = [];
+        top4id = JSON.parse(sessionStorage.getItem('top4'));
+        for (i = 0; i < top4id.length; i++) {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://imdb8.p.rapidapi.com/title/get-details?tconst=" + top4id[i],
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "imdb8.p.rapidapi.com",
+                    "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
+                }
+            }
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                var moviePoster = response.image.url;
+                var movieTitle = response.title;
+                console.log(moviePoster);
+                var output = "";
+                output += `
             <div class="col xl3 l4 m6 s12">
                 <div class="card large" >
                     <div class="card-image">
@@ -205,7 +205,13 @@ for (i = 0; i < top5id.length - 1; i++) {
             </div>
             
             `;
-        $('#movies').append(output)
+                $('#movies').append(output)
+            });
+
+        }
     });
 
+
 }
+
+getTop4();

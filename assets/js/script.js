@@ -125,7 +125,7 @@ function getVideo() {
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
             // key3 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
             // key4 = AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg
-            key: 'AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE',
+            key: 'AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg',
             q: query,
             part: 'snippet',
             maxResults: 1,

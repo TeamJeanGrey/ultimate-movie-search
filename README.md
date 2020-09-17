@@ -6,7 +6,7 @@ Have you ever struggled to find or explain a movie to someone?  What about figur
 
 ## Screenshots 
 
-![Initial Mock up](/assets/images/ums-mockup)
+![Initial Mock up](/assets/images/ums-mockup.jpg)
 
 ### User Story
 

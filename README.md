@@ -42,4 +42,4 @@ So then I can search different movies
 
 * [Link to Repository](https://github.com/TeamJeanGrey/ultimate-movie-search)
 
-* [Link to Live Site](https://teamjeangrey.github.io/ultimate-movie-search/)
+* [Link to Live Site](https://teamjeangrey.github.io/ultimate-movie-search/landing.html)

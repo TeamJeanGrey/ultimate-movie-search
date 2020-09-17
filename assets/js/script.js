@@ -6,7 +6,6 @@ $(document).ready(function () {
         event.preventDefault()
         saveInput(searchName)
         getMovies(searchName)
-        getVideo();
     });
 });
 
@@ -126,7 +125,7 @@ function getVideo() {
             // key2 = AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo
             // key3 = AIzaSyBnRzgL5l_vrUMhVvZ-uzyiPxmfuiTECJE
             // key4 = AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg
-            key: 'AIzaSyAgp2vMl59orNeECqvXmizUYVk9HO4dABo',
+            key: 'AIzaSyDy19bh4B3XhucGPbBxl22jTJDE3Ns3qpg',
             q: query,
             part: 'snippet',
             maxResults: 1,

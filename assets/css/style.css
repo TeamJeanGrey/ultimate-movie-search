@@ -1,0 +1,95 @@
+body{
+    background-color: #1f2933;
+    color: white;
+}
+
+nav {
+    background-color: #3e4c59;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.container {
+    padding: 20px;
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: white;
+}
+h4{
+    display: block;
+    text-align: center;    
+}
+
+.search-area {
+    margin-top: 20px;
+}
+
+.search {
+    height: 100%;
+}
+
+.input-field input :focus{
+    background-color: #1f2933 !important;
+}
+
+
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    margin-bottom: 50px; 
+}
+.inline{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+img {
+    height: 450px;
+    
+}
+
+#movies img, #movie img {
+    width: 100%;
+}
+
+.well {
+    margin-top: 20px;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+#movies .col s2 .well{
+    height: 390px;
+    margin: 30px;
+}
+
+#movies .col s2 img {
+    height: 240px;
+}
+
+.card {
+    color: white;
+    background-color: #7b8794;
+}
+
+.header-short {
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+    .landing-header {
+        font-size: 3vw !important;
+        font-weight: bold !important;
+    }
+  }

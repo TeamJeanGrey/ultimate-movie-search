@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Movie Search!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav class="">
+        <div class="nav-wrapper">
+            <!-- navbar brand, navbar menu... -->
+            <div class="col s6">
+                <a href="landing.html" class="brand-logo center landing-header">The Ultimate
+                    Movie Search</a>
+
+            </div>
+            <!-- <div class="col s6 right search">
+                <form>
+                    <div class="input-field ">
+                        <input id="search" type="search" required placeholder="Search">
+                        <label  id="movie-search1" class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    </div>
+
+    <div class="container">
+        <div id="movie" class="well"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        getMovie();
+        getVideo();
+    </script>
+</body>
+
+
+</html>

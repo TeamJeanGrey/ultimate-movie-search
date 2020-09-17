@@ -36,7 +36,7 @@ function getMovies(searchName) {
             `;
             });
 
-            $('#movies').prepend(output)
+            $('#movies').html(output)
         })
         .catch((error) => {
             console.log(error)
@@ -160,7 +160,7 @@ var getTop5 = {
 
 $.ajax(getTop5).done(function (response) {
     console.log(response);
-    var top5 = response.slice(0, 5);
+    var top5 = response.slice(0, 10);
     console.log(top5);
     var id = [];
     for (i = 0; i < top5.length; i++) {
@@ -172,7 +172,7 @@ $.ajax(getTop5).done(function (response) {
 
 var top5id = [];
 top5id = JSON.parse(sessionStorage.getItem('top5'));
-for (i = 0; i < top5id.length; i++) {
+for (i = 0; i < top5id.length - 1; i++) {
     var settings = {
         "async": true,
         "crossDomain": true,

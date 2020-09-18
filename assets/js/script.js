@@ -55,7 +55,6 @@ function setMovieSelected(title) {
 // save user's search into session storage
 function saveInput(searchName) {
     sessionStorage.setItem("movie-name", searchName)
-
 }
 // send to movie.html page, pull user's search from session storage to show movie details
 function getMovie() {

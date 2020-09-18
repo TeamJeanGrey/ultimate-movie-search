@@ -9,11 +9,13 @@ $(document).ready(function () {
     });
 });
 
+// call ombd api to get all movies that contain our search query
 function getMovies(searchName) {
     axios.get('https://www.omdbapi.com?s=' + searchName + '&apikey=e8893681')
         .then((response) => {
-            console.log(response)
             var movies = response.data.Search
+
+            // display each movie as a card
             var output = ''
             $.each(movies, (index, movie) => {
                 output += `
@@ -62,7 +64,6 @@ function getMovie() {
     axios.get('https://www.omdbapi.com?i=' + movieId + '&apikey=e8893681')
         .then((response) => {
             var movie = response.data
-            console.log(response.data.Actors)
             var output = `
             <div class="row">
                 <div class="col s12 m4">
@@ -106,16 +107,9 @@ function getMovie() {
             console.log(error)
         })
 }
-// $("#search-container").submit(function (event) {
-//     event.preventDefault();
-//     var searchMovieNameEl = sessionStorage.getItem("movie-name") + " newest trailer";
 
-//     getVideo(searchMovieNameEl);
-// });
-
-
+// call youtube api to get video id of corresponding movie trailer
 function getVideo() {
-    console.log("running get video")
     var query = sessionStorage.getItem("movie-title") + " trailer";
     $.ajax({
         type: 'GET',
@@ -133,7 +127,6 @@ function getVideo() {
             videoEmbeddable: true,
         },
         success: function (data) {
-            console.log(data)
             embedVideo(data)
         },
         error: function (response) {
@@ -142,11 +135,14 @@ function getVideo() {
     });
 }
 
+// inject video id into iframe player to play trailer
 function embedVideo(data) {
     $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId + "?autoplay=1&;enablejsapi=1")
 }
+
+// call imdb api to get top250 movies
 function getTop4() {
-    // rapidapi_key1 = 
+    // rapidapi_key1 = 59292c8b02mshd97cf9790ba265ap173581jsn980626b65383
     var gettop4 = {
         "async": true,
         "crossDomain": true,
@@ -158,19 +154,24 @@ function getTop4() {
         }
     }
 
+    // use slice to get top4 movies
+    // imdb api restricted to 5 queryies
+
     $.ajax(gettop4).done(function (response) {
-        console.log(response);
         var top4 = response.slice(0, 4);
-        console.log(top4);
         var id = [];
         for (i = 0; i < top4.length; i++) {
             id[i] = top4[i].id.split("/")[2];
         }
-        console.log(id);
+
+        // store top4 in session storage
         var top4ID = sessionStorage.setItem('top4', JSON.stringify(id))
 
+        // get top4 from session storage
         var top4id = [];
         top4id = JSON.parse(sessionStorage.getItem('top4'));
+
+        // call imdb d api to get movie details for each top movie
         for (i = 0; i < top4id.length; i++) {
             var settings = {
                 "async": true,
@@ -184,26 +185,27 @@ function getTop4() {
             }
 
             $.ajax(settings).done(function (response) {
-                console.log(response);
                 var moviePoster = response.image.url;
                 var movieTitle = response.title;
-                console.log(moviePoster);
+
+                // dynamically create cards for each movie
                 var output = "";
                 output += `
-            <div class="col xl3 l4 m6 s12">
-                <div class="card large" >
-                    <div class="card-image">
-                        <img class="responsive-img" src="${moviePoster}">
-                    </div>
+                <div class="col xl3 l4 m6 s12">
+                    <div class="card large" >
+                        <div class="card-image">
+                            <img class="responsive-img" src="${moviePoster}">
+                        </div>
                     <div class="card-content">
                         <h5>${movieTitle}</h5>
-                    <div class="card-action center">
+                        <div class="card-action center">
                         <a onclick="movieSelected('${response.id.split("/")[2]}'); setMovieSelected('${movieTitle}')" class="btn btn-primary" href="#">Movie Details</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             
             `;
+                // append output to movie container
                 $('#movies').append(output)
             });
 

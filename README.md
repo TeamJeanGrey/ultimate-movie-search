@@ -10,22 +10,21 @@ Have you ever struggled to find or explain a movie to someone?  What about figur
 
 ### User Story
 
-As a movie enthusiast
-I want to search by a movie's title
-So then I can learn more about it's details
-I want to see different options based on the title
-So then I can elect a title based on the information and thumbnail.
-Once I select an option, I'll then be given an option to see a trailer for the film.hoose the correct movie
-I want to learn more details once I selected the movie I'm looking for
-so then I click to view another page to view the details
-I want to see a preview of the movie
-so then I can see if it is the correct movie to watch
-I want to be able to return and search a movie
-So then I can search different movies
+* As a movie enthusiast
+* I want to search by a movie's title
+* So then I can learn more about it's details
+* I want to see different options based on the title
+* So then I can elect a title based on the information and thumbnail.
+* Once I select an option, I'll then be given an option to see a trailer for the film.
+* I want to learn more details once I selected the movie I'm looking for
+* so then I click to view another page to view the details
+* I want to see a preview of the movie
+* so then I can see if it is the correct movie to watch
+* I want to be able to return and search a movie
+* So then I can search different movies
 
 ## future development
 
-* create tabs on movie detail page to see even more information about the movie that may be relevent to the user
 * create a dropdown nav bar that contains the user's search history
 * add dynamic live previews to popular movies searched on IMDB database
 
@@ -33,9 +32,10 @@ So then I can search different movies
 
 * HTML
 * CSS
-* Materialize Framework
+* Materialize CSS Framework
 * Google API (YouTube)
 * OMDB API
+* IMDB API
 * Axios
 
 ## Links to Site and Repo

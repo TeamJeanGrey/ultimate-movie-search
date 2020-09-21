@@ -149,7 +149,7 @@ function getTop4() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "imdb8.p.rapidapi.com",
-            "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
+            "x-rapidapi-key": "d66560e8e9msh9325999e88657d9p10f8ebjsn6e0713cb3d85"
         }
     }
 
@@ -179,7 +179,7 @@ function getTop4() {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "imdb8.p.rapidapi.com",
-                    "x-rapidapi-key": "59292c8b02mshd97cf9790ba265ap173581jsn980626b65383"
+                    "x-rapidapi-key": "d66560e8e9msh9325999e88657d9p10f8ebjsn6e0713cb3d85"
                 }
             }
 
